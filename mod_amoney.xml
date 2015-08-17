@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<mosinstall type="module" version="2.0.0">
+<name>AMoney</name>
+<author>Adeptus</author>
+<creationDate>июнь 2008</creationDate>
+<copyright>(C) 2008 Adeptus</copyright>
+<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+<authorEmail>adeptus@adeptsite.info</authorEmail> 
+<authorUrl>www.adeptsite.info</authorUrl>
+<version>3.0</version>
+<description><![CDATA[<p>Модуль приема платежей через платежные системы Webmoney, Яндекс.Деньги, PayPal</p>]]></description>
+<files>
+	<filename module="mod_amoney">mod_amoney.php</filename>
+    <filename>mod_amoney/logowm.gif</filename>
+    <filename>mod_amoney/logoyandex.gif</filename>
+    <filename>mod_amoney/logopaypal.gif</filename>
+    <filename>mod_amoney/logowm_small.gif</filename>
+    <filename>mod_amoney/logoyandex_small.gif</filename>
+    <filename>mod_amoney/logopaypal_small.gif</filename>
+    <filename>mod_amoney/jquery.js</filename>
+</files>
+<params>
+    <param name="@spacer" type="spacer" default="Общие параметры" label="" description="" />
+	<param name="moduleclass_sfx" type="text" default="" label="Суффикс класса CSS модуля" description="Суффикс для добавления к классу CSS модуля (table.moduletable), для индивидуальной настройки модуля." />
+	<param name="pretext" label="Вводный текст" type="text" default="Благодарность Автору" />
+	<param name="btntxt" label="Текст кнопки отправки" type="text" default="Отправить" />
+	
+    <param name="@spacer" type="spacer" default="Webmoney" label="" description="" />
+	<param name="use_wm" type="radio" default="1" label="Использовать Webmoney?" description="">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+	</param>
+    <param name="wmz" type="text" size="14" default="Z336955269328" label="Номер кошелька WMZ" description="Ваш номер кошелька в долларах США" />
+	<param name="wme" type="text" size="14" default="E103233136042" label="Номер кошелька WME" description="Ваш номер кошелька в Евро" />
+    <param name="wmr" type="text" size="14" default="R270500581273" label="Номер кошелька WMR" description="Ваш номер кошелька в Рублях РФ" />
+    <param name="wmu" type="text" size="14" default="U182150656389" label="Номер кошелька WMU" description="Ваш номер кошелька в Укр.Гривнах" />
+	<param name="wm_summ" type="text" size="5" default="10" label="Сумма пожертвования" description="Сумма пожертвования по умолчанию." />
+	<param name="wm_successurl" type="text" default="http://" label="URL успешной операции" description="Адрес для перехода после успешно выполненного платежа" />
+	<param name="wm_errorurl" type="text" default="http://" label="URL ошибки операции" description="Адрес для перехода после незаконченного платежа либо после ошибки во время платежа" />
+	<param name="wm_descpay" type="textarea" cols="20" rows="5" default="Благодарность Автору" label="Назначение платежа" description="Описание назначения платежа. Данные сведения будут прикреплены к платежу" />
+
+    <param name="@spacer" type="spacer" default="Яндекс.Деньги" label="" description="" />
+	<param name="use_yandex" type="radio" default="1" label="Использовать Яндекс.Деньги?" description="">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+	</param>
+    <param name="yandex" type="text" size="14" default="41001113417267" label="Номер кошелька Яндекс" description="Ваш номер кошелька в системе Яндекс.Деньги" />
+	<param name="yandex_summ" type="text" size="14" default="50" label="Сумма пожертвования" description="Сумма пожертвования по умолчанию." />
+	<param name="yandex_successurl" type="text" default="http://" label="Ссылка на сайт" description="Укажите адрес вашего сайта" />
+
+    <param name="@spacer" type="spacer" default="PayPal" label="" description="" />
+	<param name="use_paypal" type="radio" default="1" label="Использовать PayPal?" description="">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+	</param>
+	<param name="paypal_email" type="text" default="alex1962@donpac.ru" label="PayPal Email" description="Ваш Email в системе PayPal." />
+	<param name="donate_org" type="text"  label="Назначение платежа" default="Donate Author" description="Назначение платежа или название организации." />
+	<param name="paypalcur_on" type="radio" default="0" label="Выбор валюты" description="Включить/отключить выбор валюты платежа.">
+			<option value="1">Отключить</option>
+			<option value="0">Включить</option>
+	</param>
+	<param name="donate_len" type="radio" default="1" label="Периодичность" description="Включить/отключить периодический платеж.">
+			<option value="1">Отключить</option>
+			<option value="0">Включить</option>
+	</param>
+	<param name="paypallen_val" type="list" default="4" label="Период" description="Период платежей (если включено).">
+		<option value='4'>Один раз</option>
+		<option value='1'>Еженедельно</option>
+		<option value='2'>Ежемесячно</option>
+		<option value='3'>Ежегодно</option>
+	</param>
+	<param name="paypalval_on" type="radio" default="0" label="Ввод суммы" description="Включить/отключить возможность ввода суммы платежа.">
+			<option value="1">Отключить</option>
+			<option value="0">Включить</option>
+	</param>
+	<param name="paypalcur_val" type="list" default="USD" label="Валюта по умолчанию" description="">
+		<option value='USD'>USD "$"</option>
+		<option value='GBP'>GBP "?"</option>
+		<option value='EUR'>EUR "€"</option>
+	</param>
+	<param name="paypalval_val" type="text"  default="5" label="Сумма по умолчанию" description="" />
+    <param name="paypalvalleast_val" type="text" default="5" label="Минимальная сумма" description="" />
+	<param name="link_return" type="text" size="40" default="http://www.yoursite.com" label="URL успешного платежа" description=""/>
+    <param name="link_cancel" type="text" size="40" default="http://www.yoursite.com" label="URL ошибки" description=""/>
+</params>
+</mosinstall>
