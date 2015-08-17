@@ -1,4 +1,4 @@
-# [AMoney NATIVE](http://adeptsite.info/content/view/24/39/)
+# [AMoney](http://adeptsite.info/content/view/24/39/)
 
 The original Universal module Donate (Webmoney, Yandex, PayPal) Version v 3.0 with AJAX functionality.<br />
 The module is designed to organize your site receiving donations (well, or just payments for goods or services ...)
