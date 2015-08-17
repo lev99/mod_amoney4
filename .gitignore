@@ -419,6 +419,15 @@
 /media/plg_system_highlight/*
 /media/system/*
 /media/index.html
+/modules/mod_amoney/mod_amoney/logopaypal.gif
+/modules/mod_amoney/mod_amoney/logopaypal_small.gif
+/modules/mod_amoney/mod_amoney/logowm.gif
+/modules/mod_amoney/mod_amoney/logowm_small.gif
+/modules/mod_amoney/mod_amoney/logoyandex.gif
+/modules/mod_amoney/mod_amoney/logoyandex_small.gif
+/modules/mod_amoney/mod_amoney/jquery.js
+/modules/mod_amoney/mod_amoney.php
+/modules/mod_amoney/mod_amoney.xml
 /modules/mod_articles_archive/*
 /modules/mod_articles_categories/*
 /modules/mod_articles_category/*
